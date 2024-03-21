@@ -14,6 +14,8 @@ public class Escena {
 
     public void jugar() {
         Scanner Leer = new Scanner(System.in);
+        char op;
+        do {
         System.out.println("Eliga Opcion ");
         System.out.println("W - Para ir hacia Arriba. ");
         System.out.println("S - Para ir hacia Abajo. ");
@@ -21,8 +23,8 @@ public class Escena {
         System.out.println("D - Para ir hacia Derecha. ");
         System.out.println("E - Para ir Salir. ");
 
-        char op;
-        do {
+        
+        
 
             op = Leer.next().charAt(0);
             switch (op) {
@@ -38,10 +40,7 @@ public class Escena {
                 case 'A', 'a':
                     vehiculo.moverIzquierda();
                     break;
-
-                case 'E', 'e':
-                    System.out.println("FIN");
-                    break;
+                    
                 default:
 
                     System.out.println("Letra Incorrecta");
@@ -51,7 +50,7 @@ public class Escena {
                 vehiculo.setChocado(true);
                 System.out.println("CHOCASTE !!!");
             }
-        } while (op != 'e' || op != 'E');
+        } while (op != 'e' && op != 'E');
 
     }
 

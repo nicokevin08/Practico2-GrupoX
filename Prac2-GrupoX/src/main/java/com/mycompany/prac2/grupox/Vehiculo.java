@@ -1,25 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.prac2.grupox;
 
-/**
- *
- * @author emanu
- */
 public abstract class Vehiculo {
-    
-    private int posX;
-    private int posY;
-    private boolean chocado;
+
+    protected int posX;
+    protected int posY;
+    protected boolean chocado;
 
     public Vehiculo(int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
+
     }
 
-     public int getPosX() {
+    public int getPosX() {
         return posX;
     }
 
@@ -42,44 +35,13 @@ public abstract class Vehiculo {
     public void setChocado(boolean chocado) {
         this.chocado = chocado;
     }
-    
-    public void moverArriba() {
-        if (posY > 0 && !chocado) {
-            posY -= 1;
-            System.out.println("La posición es (" + posX + ", " + posY + ")");
-        } else {
-            System.out.println("NO SE PUEDE MOVER");
 
-        }
-    }
-    public void moverAbajo() {
-        if (!chocado && posY < 22) {
-            posY += 1;
-            System.out.println("La posición es (" + posX + ", " + posY + ")");
-        } else {
-            System.out.println("NO SE PUEDE MOVER");
+    public abstract void moverArriba();
 
-        }
-    }
+    public abstract void moverAbajo();
 
-    public void moverDerecha() {
-        if (!chocado && posX < 80) {
-            posX += 1;
-            System.out.println("La posición es (" + posX + ", " + posY + ")");
-        } else {
-            System.out.println("NO SE PUEDE MOVER");
+    public abstract void moverDerecha();
 
-        }
-    }
-
-    public void moverIzquierda() {
-        if (posX > 0 && !chocado) {
-            posX -= 1;
-            System.out.println("La posición es (" + posX + ", " + posY + ")");
-        } else {
-            System.out.println("NO SE PUEDE MOVER");
-
-        }
-    }
+    public abstract void moverIzquierda();
 
 }

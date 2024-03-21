@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Escena {
 
-    private Auto auto;
+    private Vehiculo vehiculo;
     private Pared pared;
 
-    public Escena(Auto auto) {
-        this.auto = auto;
+    public Escena(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
         this.pared = new Pared();
     }
 
@@ -20,23 +20,23 @@ public class Escena {
         System.out.println("A - Para ir hacia Izquierda. ");
         System.out.println("D - Para ir hacia Derecha. ");
         System.out.println("E - Para ir Salir. ");
-        
+
         char op;
         do {
 
             op = Leer.next().charAt(0);
             switch (op) {
                 case 'W', 'w':
-                    auto.moverArriba();
+                    vehiculo.moverArriba();
                     break;
                 case 'S', 's':
-                    auto.moverAbajo();
+                    vehiculo.moverAbajo();
                     break;
                 case 'D', 'd':
-                    auto.moverDerecha();
+                    vehiculo.moverDerecha();
                     break;
                 case 'A', 'a':
-                    auto.moverIzquierda();
+                    vehiculo.moverIzquierda();
                     break;
 
                 case 'E', 'e':
@@ -47,16 +47,12 @@ public class Escena {
                     System.out.println("Letra Incorrecta");
                     System.out.println("Ingrese nuevamente");
             }
-            if (auto.getPosX() == pared.getPosX() && auto.getPosY() == pared.getPosY()) {
-                auto.setChocado(true);
-                System.out.println("CHOCASTE CHANO !!!");
+            if (vehiculo.getPosX() == pared.getPosX() && vehiculo.getPosY() == pared.getPosY()) {
+                vehiculo.setChocado(true);
+                System.out.println("CHOCASTE !!!");
             }
         } while (op != 'e' || op != 'E');
 
-    }
-
-    public void setAuto(Auto auto) {
-        this.auto = auto;
     }
 
 }

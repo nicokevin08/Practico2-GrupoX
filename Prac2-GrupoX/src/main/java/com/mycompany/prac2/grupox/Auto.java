@@ -1,14 +1,9 @@
 package com.mycompany.prac2.grupox;
 
-public class Auto {
-
-    private int posX;
-    private int posY;
-    private boolean chocado = false;
+public class Auto extends Vehiculo {
 
     public Auto(int posX, int posY) {
-        this.posX = posX;
-        this.posY = posY;
+        super(posX, posY);
     }
 
     public int getPosX() {

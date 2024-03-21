@@ -20,7 +20,7 @@ public class Escena {
         System.out.println("A - Para ir hacia Izquierda. ");
         System.out.println("D - Para ir hacia Derecha. ");
         System.out.println("E - Para ir Salir. ");
-
+        
         char op;
         do {
 

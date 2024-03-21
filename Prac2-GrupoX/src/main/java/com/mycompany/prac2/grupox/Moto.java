@@ -8,6 +8,12 @@ package com.mycompany.prac2.grupox;
  *
  * @author emanu
  */
-public class Moto {
+public class Moto extends Vehiculo {
     
+    public Moto(int posX, int posY) {
+        super(posX, posY);
+    }
+    
+    
+
 }

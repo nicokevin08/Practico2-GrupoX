@@ -7,7 +7,7 @@ public class Prac2GrupoX {
         Vehiculo benelli = new Moto(15, 60);
         Vehiculo mercerdez = new Camion(10, 32);
 
-        Escena uno = new Escena(peugeot);
+        Escena uno = new Escena(benelli);
 
         uno.jugar();
     }

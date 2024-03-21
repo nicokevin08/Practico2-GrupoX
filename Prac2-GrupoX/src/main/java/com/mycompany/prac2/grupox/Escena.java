@@ -13,6 +13,8 @@ public class Escena {
     }
 
     public void jugar() {
+        System.out.println("La posicion del VEHICULO X,Y es: " + vehiculo.getPosX() + ", " + vehiculo.getPosY());
+
         Scanner Leer = new Scanner(System.in);
         char op;
         do {
